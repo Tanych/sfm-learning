@@ -18,6 +18,7 @@ print(authorize_url)
 # Testing the url
 # webbrowser.open_new(authorize_url)
 
+#Try to save the code to the session,not input
 code = raw_input()
 
 local_request = local_api.request_access_token(code, REDIRECT_URL)
@@ -31,10 +32,10 @@ statuses = local_api.statuses__public_timeline()['statuses']
 length = len(statuses)
 
 for i in range(0, length):
-    print u'昵称：' + statuses[i]['user']['screen_name']
-    print u'简介：' + statuses[i]['user']['description']
-    print u'位置：' + statuses[i]['user']['location']
-    print u'微博：' + statuses[i]['text']
+    print u'Username：' + statuses[i]['user']['screen_name']
+    print u'Introduction：' + statuses[i]['user']['description']
+    print u'Location：' + statuses[i]['user']['location']
+    print u'Content：' + statuses[i]['text']
     print '\n'
 
 # print(local_api.statuses__public_timeline())
