@@ -1,17 +1,19 @@
 from django.shortcuts import render
-
 # Create your views here.
-def index(request):
-    weibo_list=weiboapp.objects.all()
-    return render(request,"weiboapp/index.html",{'weibo_list':weibo_list},)
+from django.http import HttpResponse
 
-def add_done(request):
-    add_question=Weibo()
-    content=request.POST['content']
-    add_question.context=content
-    add_question.save()
-    return render(request,"weiboapp/add_done.html",{'question':content},)
+
+def index(request):
+    return render(request, 'weibo/index.html')
+
 
 def add(request):
-    return render(request,"weiboapp/weibo/index.html")
+    a = request.GET['a']
+    b = request.GET['b']
+    c = int(a) + int(b)
+    return HttpResponse(str(c))
 
+
+def add2(request, a, b):
+    c = int(a) + int(b)
+    return HttpResponse(str(c))

@@ -102,21 +102,19 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-CURRENT_PATH = os.path.dirname(os.path.dirname(__file__))
-
-STATIC_ROOT = os.path.join(CURRENT_PATH, 'learningsite/static').replace('\\','/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'collectedstatic')
 
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     #'/home/ychtan/Desktop/sina_api_testing/',   
-    os.path.join( CURRENT_PATH,'learningsite/static/weibo').replace('\\','/')
+    os.path.join( BASE_DIR,'commonstatic').replace('\\','/'),
 )
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATIC_URL =  os.path.join( os.path.dirname(__file__),'static')
+
 
 # template files
 TEMPLATE_DIRS = (

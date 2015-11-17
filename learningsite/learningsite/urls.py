@@ -13,22 +13,25 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-from django.conf.urls import include, url
+from django.conf.urls import include, patterns, url
 from django.contrib import admin
 from django.conf import settings
 from weiboapp import views
-
 import os
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-	#url(r'^weibo/(?P<path>.*)$','learningsite.views.index')
-	url(r'^weibo/(?P<path>.*)$','django.views.static.serve',
-        {'document_root': os.path.join(settings.STATIC_ROOT,'weibo'),'show_indexes': True}),
-	
-	#for weibo app testing
-	url(r'^add/$', views.add),
-	url(r'^index/$', views.index),
-	url(r'^add_done/$', views.add_done),
+    url(r'^$', 'weiboapp.views.index', name='index'),
+    url(r'^add/$', 'weiboapp.views.add', name='add'),
+    url(r'^add/(\d+)/(\d+)/$', 'weiboapp.views.add2', name='add2'),
 
+    """
+    # url(r'^weibo/(?P<path>.*)$','learningsite.views.index')
+    url(r'^weibo/(?P<path>.*)$', 'django.views.static.serve',
+        {'document_root': os.path.join(settings.STATIC_ROOT, 'weibo'), 'show_indexes': True}),
+
+    # for weibo app testing
+
+    url(r'^add_done/$', views.add_done),
+"""
 ]
