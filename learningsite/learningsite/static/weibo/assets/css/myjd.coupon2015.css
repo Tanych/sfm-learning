@@ -1,0 +1,377 @@
+/* user-myjd-2015 myjd.coupon2015.css Date:2015-05-26 15:09:16 */
+
+div.mod-main .mt .extra-l li{
+	padding-left:0;
+	padding-right:20px
+}
+.coupon-list{
+	padding:0 0 10px;
+	margin:0 0 10px;
+	border-bottom:1px solid #ebebeb
+}
+.coupon-list .coupon-num{
+	margin:0 0 5px
+}
+.coupon-list .coupon-msg{
+	display:inline-block;
+	display:block
+}
+.coupon-list .coupon-msg:after{
+	content:
+	.
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}
+* html .coupon-list .coupon-msg{
+	height:1%
+}
+	*+html .coupon-list .coupon-msg
+	min-height:1%
+}
+.coupon-list .coupon-msg .coupon-type{
+	position:relative;
+	float:left;
+	width:210px;
+	height:93px;
+	margin:0 20px 0 0;
+	padding:20px 40px 0 10px;
+	color:#fff;
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-icon-new.png) #ffb6ae no-repeat
+}
+.coupon-list .coupon-msg .coupon-type .c-price{
+	padding-left:25px;
+	margin-bottom:5px
+}
+.coupon-list .coupon-msg .coupon-type .c-price em{
+	font-family:verdana;
+	font-size:20px;
+	font-weight:bold
+}
+.coupon-list .coupon-msg .coupon-type .limit{
+	font-size:0;
+	margin-bottom:5px
+}
+.coupon-list .coupon-msg .coupon-type .limit .label,.coupon-list .coupon-msg .coupon-type .limit .li{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	font-size:12px;
+	vertical-align:middle
+}
+.coupon-list .coupon-msg .coupon-type .limit .li{
+	height:14px;
+	line-height:14px;
+	padding:0 10px;
+	margin-right:4px;
+	background:#fff;
+	border:1px solid #fff;
+	border-color:#e7e6e6 #fff #fff #e7e6e6;
+	cursor:default
+}
+.coupon-list .coupon-msg .coupon-type .c-overdue{
+	position:absolute;
+	right:0;
+	top:0;
+	width:52px;
+	height:48px;
+	overflow:hidden;
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-icon-new.png) 0 -749px
+}
+.coupon-list .coupon-msg .j-coupon{
+	background-position:0 0
+}
+.coupon-list .coupon-msg .j-coupon .li{
+	color:#ff8072
+}
+.coupon-list .coupon-msg .d-coupon{
+	background-position:0 -123px
+}
+.coupon-list .coupon-msg .d-coupon .li{
+	color:#f9982d
+}
+.coupon-list .coupon-msg .yf-coupon{
+	background-position:0 -246px
+}
+.coupon-list .coupon-msg .yf-coupon .li{
+	color:#2da9ff
+}
+.coupon-list .coupon-msg .j-coupon-gray{
+	background-position:0 -492px
+}
+.coupon-list .coupon-msg .d-coupon-gray{
+	background-position:0 -369px
+}
+.coupon-list .coupon-msg .yf-coupon-gray{
+	background-position:0 -615px
+}
+.coupon-list .coupon-msg .coupon-range{
+	float:left;
+	width:310px;
+	height:113px;
+	position:relative;
+	line-height:20px
+}
+.coupon-list .coupon-msg .coupon-range .coupon-origin{
+	position:absolute;
+	bottom:0;
+	left:0
+}
+.coupon-list .coupon-msg .coupon-ops{
+	float:right;
+	position:relative;
+	width:180px;
+	height:113px
+}
+.coupon-list .coupon-msg .coupon-ops .btns{
+	position:absolute;
+	bottom:0
+}
+.coupon-list .coupon-msg .coupon-ops .del-btn{
+	padding:2px 22px 3px
+}
+.coupon-list .coupon-msg .coupon-ops .del-btn b{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	width:13px;
+	height:14px;
+	margin:0 3px 0 0;
+	overflow:hidden;
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-icon-new.png) -201px -750px
+}
+.coupon-list .coupon-msg .coupon-ops .c-addr b{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	vertical-align:middle;
+	width:7px;
+	height:4px;
+	margin:0 0 0 3px;
+	overflow:hidden;
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-icon-new.png) -114px -750px
+}
+.coupon-list .coupon-msg .coupon-ops .c-addr-hover b{
+	background-position:-184px -750px
+}
+.coupon-list .coupon-msg .coupon-ops .tooltip{
+	position:relative;
+	z-index:5
+}
+.coupon-list .coupon-msg .coupon-ops div.prompt-01{
+	left:-360px;
+	top:-20px;
+	width:350px
+}
+.coupon-list .coupon-msg .coupon-ops div.prompt-01 .pc .close{
+	top:10px
+}
+.coupon-list .coupon-msg .coupon-ops .addr-tit{
+	padding-bottom:5px;
+	font-weight:bold;
+	border-bottom:1px dotted #ccc
+}
+.coupon-list .coupon-msg .coupon-ops .addr-cont ul{
+	display:inline-block;
+	display:block;
+	width:360px
+}
+.coupon-list .coupon-msg .coupon-ops .addr-cont ul:after{
+	content:
+	.
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}
+* html .coupon-list .coupon-msg .coupon-ops .addr-cont ul{
+	height:1%
+}
+	*+html .coupon-list .coupon-msg .coupon-ops .addr-cont ul
+	min-height:1%
+}
+.coupon-list .coupon-msg .coupon-ops .addr-cont li{
+	float:left;
+	width:110px;
+	margin:5px 10px 0 0
+}
+.coupon-list .coupon-msg .coupon-ops .addr-cont a{
+	color:#666
+}
+.coupon-list .coupon-msg .coupon-ops .addr-cont a:hover{
+	color:#e4393c
+}
+.coupon-list-gray .coupon-msg .coupon-type{
+	color:#999;
+	background-color:#f1f1f1
+}
+.coupon-list-gray .coupon-msg .coupon-type .limit .li{
+	background:#949494;
+	border-color:#868686 #949494 #949494 #868686;
+	color:#fff
+}
+.coupon-list-gray .coupon-msg .coupon-range{
+	color:#999
+}
+.coupon-list-gray .coupon-msg .coupon-range a{
+	color:#999
+}
+.coupon-list-gray .coupon-msg .coupon-range a:hover{
+	color:#e4393c
+}
+.coupon-rule{
+	display:inline-block;
+	display:block
+}
+.coupon-rule:after{
+	content:
+	.
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}
+* html .coupon-rule{
+	height:1%
+}
+	*+html .coupon-rule
+	min-height:1%
+}
+.coupon-rule li{
+	float:left;
+	width:104px;
+	height:40px;
+	padding:30px 0;
+	text-align:center;
+	color:#ffc07c;
+	font-size:13px;
+	font-family:'\5fae\8f6f\96c5\9ed1';
+	white-space:nowrap;
+	font-weight:bold;
+	margin-right:25px;
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-list.png) no-repeat
+}
+.coupon-rule li a{
+	color:#ffc07c;
+	display:block
+}
+.coupon-rule-gray li{
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-list-gray.png) no-repeat
+}
+.coupon-rule-gray li a{
+	color:#999
+}
+#quandte .form .item span.label{
+	width:200px
+}
+#quandte .form .itxt02{
+	width:60px
+}
+#quandte .btn-9{
+	float:none;
+	height:28px;
+	margin-left:10px
+}
+.coupon-toolbar{
+	height:30px;
+	line-height:30px;
+	background:#f5f5f5;
+	margin:0 0 10px
+}
+.coupon-toolbar ul{
+	display:inline-block;
+	display:block
+}
+.coupon-toolbar ul:after{
+	content:
+	.
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden
+}
+* html .coupon-toolbar ul{
+	height:1%
+}
+	*+html .coupon-toolbar ul
+	min-height:1%
+}
+.coupon-toolbar li{
+	float:left;
+	margin:0 20px 0 0;
+	_display:inline
+}
+.coupon-toolbar .c-type{
+	position:relative;
+	z-index:5;
+	padding:1px 10px;
+	margin-left:15px
+}
+.coupon-toolbar .c-type .dt b{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:6px;
+	height:3px;
+	vertical-align:middle;
+	overflow:hidden;
+	margin:0 0 0 3px;
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-icon-new.png) -99px -749px no-repeat
+}
+.coupon-toolbar .c-type .dd{
+	position:absolute;
+	display:none;
+	top:29px;
+	left:-1px;
+	width:87px;
+	background:#fff
+}
+.coupon-toolbar .c-type .dd a{
+	display:block;
+	padding:0 10px;
+	color:#333
+}
+.coupon-toolbar .c-type .dd a.curr,.coupon-toolbar .c-type .dd a:hover{
+	background:#f3f3f3;
+	color:#333
+}
+.coupon-toolbar .c-type-hover{
+	background:#fff;
+	border:1px solid #ddd;
+	padding:0 9px
+}
+.coupon-toolbar .c-type-hover .dt b{
+	background-position:-169px -748px
+}
+.coupon-toolbar .c-type-hover .dd{
+	display:block;
+	border:1px solid #ddd;
+	border-top:0
+}
+.coupon-toolbar .c-sort b{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	width:10px;
+	height:11px;
+	vertical-align:middle;
+	overflow:hidden;
+	margin:0 0 0 3px;
+	background:url(http://misc.360buyimg.com/user/myjd-2015/css/i/coupon-icon-new.png) no-repeat
+}
+.coupon-toolbar .c-sort .down{
+	background-position:-80px -749px
+}
+.coupon-toolbar .c-sort .up{
+	background-position:-150px -749px
+}
+.coupon-toolbar .c-sort .curr .down{
+	background-position:-60px -749px
+}
+.coupon-toolbar .c-sort .curr .up{
+	background-position:-130px -749px
+}
+	
+

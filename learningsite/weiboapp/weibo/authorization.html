@@ -1,0 +1,235 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Sina API Authorization</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<style>
+    .header {
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 200%;
+      color: #333;
+      margin-top: 30px;
+    }
+    .header p {
+      font-size: 14px;
+    }
+	.container
+	{
+		border: 1px solid #00f; padding: 5px 5px
+	}
+	
+	.containerred
+	{
+		border: 1px solid #dd514c; padding: 5px 5px
+	}
+	
+</style>
+  
+<!--在这里编写你的代码-->
+
+<div class="header">
+  <div class="am-g">
+
+    <h1>Sina API Authorization</h1> 
+	
+	<h2>There are two steps for the authorization,for more details click <a href="http://open.weibo.com/wiki/OAuth/en" class="external-link" target="_blank">here</a>.</h2>
+  </div>
+  <hr>
+</div>
+
+<!--First Step-->
+<div class="am-g">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered container">
+	<ul><li>
+    <h2>Get the an authentication code using the <a href="http://open.weibo.com/wiki/2/oauth2/authorize/en" class="external-link" target="_blank">authorization service</a>.</h2>
+    </li></ul>
+	<br>
+
+   <form class="am-form am-form-horizontal" action="https://api.weibo.com/oauth2/authorize" method="get" target="_blank">
+	<div class="am-form-group">
+	<label for="client_id" class="am-u-sm-2 am-form-label">App Key</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="client_id"  name="client_id" value="1037696311">
+		</div>
+	</div>
+<br>
+
+	<div class="am-form-group">
+		<label for="redirect_uri" class="am-u-sm-2 am-form-label">Redirect URL</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="redirect_uri" name="redirect_uri" value="https://about.me/tanvict">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<label for="restype" class="am-u-sm-2 am-form-label">Response type</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="restype" name="restype" value="code">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<div class="am-u-sm-10 am-u-sm-offset-2">
+			<button type="submit" class="am-btn am-btn-primary" value="Submit">Sumbit</button>
+		</div>
+		</div>
+	</form>
+
+  </div>
+  	<br>
+</div>
+
+
+<!--Step 2-->
+<div class="am-g ">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered containerred">
+	<ul><li>
+    <h2>Get the access token using the API <a href="http://open.weibo.com/wiki/2/oauth2/access_token/en" class="external-link" target="_blank">here</a>,along with the code get in first step.</h2>
+    </li></ul>
+	<br>
+
+   <form class="am-form am-form-horizontal" action=" https://api.weibo.com/oauth2/access_token " method="get" target="_blank">
+	<div class="am-form-group">
+	<label for="app_key" class="am-u-sm-2 am-form-label">App Key</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="app_key"  name="app_key" value="1037696311">
+		</div>
+	</div>
+	<br>
+
+	<div class="am-form-group">
+		<label for="app_secret" class="am-u-sm-2 am-form-label">App Secret</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="app_secret" name="app_secret" value="1d229c06e0b883b1970c0d3173a4d050">
+		</div>
+		</div>
+	<br>
+	
+	<div class="am-form-group">
+		<label for="redirect_uri" class="am-u-sm-2 am-form-label">Redirect URL</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="redirect_uri" name="redirect_uri" value="https://about.me/tanvict">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<label for="grant_type" class="am-u-sm-2 am-form-label">Grant Type</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="grant_type" name="grant_type" value="authorization_code">
+		</div>
+		</div>
+	<br>
+	
+	<div class="am-form-group">
+	<label for="code" class="am-u-sm-2 am-form-label">Code</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="code"  name="code" value="07d03ffd714533a4a331770c9e897e04">
+		</div>
+	</div>
+	<br>
+	
+
+	<div class="am-form-group">
+		<div class="am-u-sm-10 am-u-sm-offset-2">
+			<button type="submit" class="am-btn am-btn-warning" value="Submit">Sumbit</button>
+		</div>
+		</div>
+	</form>
+
+  </div>
+  	<br>
+</div>
+
+<!--Get uid-->
+<div class="am-g ">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered container">
+	<ul><li>
+    <h2>Get the user id through the API <a href="http://open.weibo.com/wiki/2/account/get_uid" class="external-link" target="_blank">here</a>.</h2>
+    </li></ul>
+	<br>
+
+   <form class="am-form am-form-horizontal" action=" https://api.weibo.com/2/account/get_uid.json " method="get" target="_blank">
+	<div class="am-form-group">
+	<label for="app_key" class="am-u-sm-2 am-form-label">App Key</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="app_key"  name="app_key" value="1037696311">
+		</div>
+	</div>
+	<br>
+
+	
+	<div class="am-form-group">
+		<label for="access_token" class="am-u-sm-2 am-form-label">Access Token</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="access_token" name="access_token" value="2.00ZUHDrBRNEOIB4165bac273FAhBcC">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<div class="am-u-sm-10 am-u-sm-offset-2">
+			<button type="submit" class="am-btn am-btn-primary" value="Submit">Sumbit</button>
+		</div>
+		</div>
+	</form>
+
+  </div>
+  	<br>
+</div>
+
+<div class="am-g ">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered containerred">
+    <h1><a href="demo.html" class="external-link" target="_blank">Examples</h1> 
+  </div>
+  <br>
+</div>
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Sina API Testing</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<style>
+    .header {
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 200%;
+      color: #333;
+      margin-top: 30px;
+    }
+    .header p {
+      font-size: 14px;
+    }
+	.container
+	{
+		border: 1px solid #00f; padding: 5px 5px
+	}
+	
+	.containerred
+	{
+		border: 1px solid #dd514c; padding: 5px 5px
+	}
+	
+</style>
+  
+<!--在这里编写你的代码-->
+
+<div class="header">
+  <div class="am-g">
+
+    <h1>Sina <a href="http://open.weibo.com/wiki/%E5%BE%AE%E5%8D%9AAPI" class="external-link" target="_blank">API</a> 
+	Testing for <a href="https://github.com/gwu-libraries/sfm-flickr-harvester"class="external-link" target="_blank">SFM</a></h1>
+	<h2><STRONG>IMPORTANT NOTE:</STRONG> There exists <a href="http://open.weibo.com/wiki/Rate-limiting class="external-link" target="_blank">rate limit</a> in calling the API, so we might get 403 error.
+	<br>Also,there are some API in the advanced level.We only can apply them after they have checked our application.</h2>
+  </div>
+  <hr>
+</div>
+
+<!--Public Timeline-->
+<div class="am-g">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered containerred">
+	<ul><li>
+    <h2>Return the latest public weibos using <a href="http://open.weibo.com/wiki/2/statuses/public_timeline/en"class="external-link" target="_blank">statuses/public_timeline</a></h2>
+    </li></ul>
+	<br>
+
+   <form class="am-form am-form-horizontal" action="https://api.weibo.com/2/statuses/public_timeline.json" method="get" target="_blank">
+	<div class="am-form-group">
+	<label for="client_id" class="am-u-sm-2 am-form-label">App Key</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="client_id"  name="client_id" value="1037696311">
+		</div>
+	</div>
+<br>
+
+	<div class="am-form-group">
+		<label for="access_token" class="am-u-sm-2 am-form-label">Access Token</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="access_token" name="access_token" value="2.00ZUHDrBRNEOIB4165bac273FAhBcC">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<label for="page" class="am-u-sm-2 am-form-label">Page</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="page" name="page" value="1">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<div class="am-u-sm-10 am-u-sm-offset-2">
+			<button type="submit" class="am-btn am-btn-primary" value="Submit">Sumbit</button>
+		</div>
+		</div>
+	</form>
+
+  </div>
+  	<br>
+</div>
+
+
+<!--user_timeline-->
+<div class="am-g ">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered container">
+	<ul><li>
+    <h2>Return the latest weibos of single user using <a href="http://open.weibo.com/wiki/2/statuses/user_timeline" class="external-link" target="_blank">statuses/user_timeline</a></h2>
+    </li></ul>
+	<br>
+
+   <form class="am-form am-form-horizontal" action="https://api.weibo.com/2/statuses/user_timeline.json" method="get" target="_blank">
+	<div class="am-form-group">
+	<label for="app_key" class="am-u-sm-2 am-form-label">App Key</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="app_key"  name="app_key" value="1037696311">
+		</div>
+	</div>
+	<br>
+
+	<div class="am-form-group">
+		<label for="access_token" class="am-u-sm-2 am-form-label">Access Token</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="access_token" name="access_token" value="2.00ZUHDrBRNEOIB4165bac273FAhBcC">
+		</div>
+		</div>
+	<br>
+	
+	<div class="am-form-group">
+	<label for="uid" class="am-u-sm-2 am-form-label">User ID</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="uid"  name="uid" value="1700022427">
+		</div>
+	</div>
+	<br>
+	
+	<div class="am-form-group">
+	<label for="count" class="am-u-sm-2 am-form-label">Count</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="count"  name="count" value="50">
+		</div>
+	</div>
+	<br>
+	
+	<div class="am-form-group">
+		<label for="page" class="am-u-sm-2 am-form-label">Page</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="page" name="page" value="1">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<div class="am-u-sm-10 am-u-sm-offset-2">
+			<button type="submit" class="am-btn am-btn-warning" value="Submit">Sumbit</button>
+		</div>
+		</div>
+	</form>
+
+  </div>
+  	<br>
+</div>
+
+<!--batch user_timeline-->
+<div class="am-g ">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered containerred">
+	<ul><li>
+    <h2>Return the weibos content of batch users using <a href="http://open.weibo.com/wiki/2/statuses/timeline_batch" class="external-link" target="_blank">statuses/timeline_batch</a></h2>
+    </li></ul>
+	<br>
+
+   <form class="am-form am-form-horizontal" action="https://api.weibo.com/2/statuses/timeline_batch.json" method="get" target="_blank">
+	<div class="am-form-group">
+	<label for="app_key" class="am-u-sm-2 am-form-label">App Key</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="app_key"  name="app_key" value="1037696311">
+		</div>
+	</div>
+	<br>
+
+	<div class="am-form-group">
+		<label for="access_token" class="am-u-sm-2 am-form-label">Access Token</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="access_token" name="access_token" value="2.00ZUHDrBRNEOIB4165bac273FAhBcC">
+		</div>
+		</div>
+	<br>
+	
+	<div class="am-form-group">
+	<label for="uid" class="am-u-sm-2 am-form-label">User ID</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="uid"  name="uid" value="1700022427">
+		</div>
+	</div>
+	<br>
+	
+	<div class="am-form-group">
+	<label for="count" class="am-u-sm-2 am-form-label">Count</label>
+		<div class="am-u-sm-10">
+		<input type="text" id="count"  name="count" value="50">
+		</div>
+	</div>
+	<br>
+	
+	<div class="am-form-group">
+		<label for="page" class="am-u-sm-2 am-form-label">Page</label>
+		<div class="am-u-sm-10">
+			<input type="text" id="page" name="page" value="1">
+		</div>
+		</div>
+	<br>
+
+	<div class="am-form-group">
+		<div class="am-u-sm-10 am-u-sm-offset-2">
+			<button type="submit" class="am-btn am-btn-danger" value="Submit">Sumbit</button>
+		</div>
+		</div>
+	</form>
+
+  </div>
+  	<br>
+</div>
+
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>
