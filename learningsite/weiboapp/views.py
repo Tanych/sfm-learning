@@ -9,3 +9,7 @@ def index(request):
 
 def home(request):
     return render(request, 'home.html')
+
+
+def invalid(request,path):
+    return render(request, '404.html')
