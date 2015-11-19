@@ -7,13 +7,5 @@ def index(request):
     return render(request, 'weibo/index.html')
 
 
-def add(request):
-    a = request.GET['a']
-    b = request.GET['b']
-    c = int(a) + int(b)
-    return HttpResponse(str(c))
-
-
-def add2(request, a, b):
-    c = int(a) + int(b)
-    return HttpResponse(str(c))
+def home(request):
+    return render(request, 'home.html')

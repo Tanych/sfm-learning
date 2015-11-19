@@ -21,9 +21,8 @@ import os
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'weiboapp.views.index', name='index'),
-    url(r'^add/$', 'weiboapp.views.add', name='add'),
-    url(r'^add/(\d+)/(\d+)/$', 'weiboapp.views.add2', name='add2'),
+    url(r'^$', 'weiboapp.views.home', name='home'),
+    url(r'^weibo/', 'weiboapp.views.index', name='index'),
 
     """
     # url(r'^weibo/(?P<path>.*)$','learningsite.views.index')
