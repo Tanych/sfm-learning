@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'weiboapp.views.home', name='home'),
     url(r'^weibo/', 'weiboapp.views.index', name='index'),
+    url(r'^test$', 'weiboapp.views.test', name='test'),
     url(r'^(?P<path>.*)$','weiboapp.views.invalid',name='invalid'),
 
     """
