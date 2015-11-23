@@ -17,16 +17,19 @@ from django.conf.urls import include, patterns, url
 from django.contrib import admin
 from django.conf import settings
 from weiboapp import views
+
+from django.core.urlresolvers import reverse_lazy
+
 import os
 
-urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'weiboapp.views.home', name='home'),
-    url(r'^weibo/', 'weiboapp.views.index', name='index'),
-    url(r'^test$', 'weiboapp.views.test', name='test'),
-    url(r'^(?P<path>.*)$','weiboapp.views.invalid',name='invalid'),
-
-    """
+urlpatterns = patterns('',
+                       url(r'^admin/', include(admin.site.urls)),
+                       url(r'^$', 'weiboapp.views.home', name='home'),
+                       url(r'^weibo/', 'weiboapp.views.index', name='index'),
+                       url(r'^test$', 'weiboapp.views.test', name='test'),
+                       url(r'^(?P<path>.*)$', 'weiboapp.views.invalid', name='invalid'),
+                       )
+"""
     # url(r'^weibo/(?P<path>.*)$','learningsite.views.index')
     url(r'^weibo/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': os.path.join(settings.STATIC_ROOT, 'weibo'), 'show_indexes': True}),
@@ -35,4 +38,3 @@ urlpatterns = [
 
     url(r'^add_done/$', views.add_done),
 """
-]
