@@ -13,4 +13,4 @@ class Weibo(models.Model):
 
     # return the context of the weibo
     def __unicode__(self):
-        return self.weiboid
+        return self.weibo_id
