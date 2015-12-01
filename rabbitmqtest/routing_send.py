@@ -11,9 +11,15 @@ log = logging.getLogger(__name__)
 def send_msg(msg):
     connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
     channel = connection.channel()
-    channel.queue_declare(queue='hello')
-    channel.basic_publish(exchange='', routing_key='hello', body=msg)
-    log.warning("[x] sended message [%s]!", msg)
+    channel.exchange_declare(exchange='MSG', type='direct')
+    # define the routing key
+    # routings=['alcie', 'bob', 'evil']
+
+    for routing in msg:
+        message= '%s\'s message' % routing
+        channel.basic_publish(exchange='MSG', routing_key=routing, body=message)
+        log.warning("[x] sended message [%s]!", message)
+
     connection.close()
 
 
