@@ -1,0 +1,99 @@
+
+{% load i18n admin_static %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Login Page |Login Demo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/amazeui.min.css" %}" />
+  <link rel="alternate icon" type="image/png" href="{% static "assets/i/favicon.png" %}" >
+  <style>
+    .header {
+      text-align: center;
+        background: #1E5B94;
+    }
+    .header h1 {
+      font-size: 200%;
+      color: #fff;
+      margin-top: 30px;
+    }
+    .header p {
+      font-size: 14px;
+    }
+
+      .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="am-g">
+    <h1>Polls Administration</h1>
+
+  </div>
+  <hr />
+</div>
+<div class="am-g">
+  <div class="am-u-lg-6 am-u-md-8 am-u-sm-centered">
+    <h3>Login</h3>
+
+    <hr>
+    <div class="am-btn-group">
+      <a href="#" class="am-btn am-btn-secondary am-btn-sm"><i class="am-icon-github am-icon-sm"></i> Github</a>
+      <a href="#" class="am-btn am-btn-success am-btn-sm"><i class="am-icon-google-plus-square am-icon-sm"></i> Google+</a>
+      <a href="#" class="am-btn am-btn-primary am-btn-sm"><i class="am-icon-twitter am-icon-sm"></i> Twitter</a>
+    </div>
+
+    <br>
+    <br>
+
+   <form action="{{ app_path }}" method="post"  class="am-form" id="login-form">{% csrf_token %}
+
+      <div class="form-row">
+        {{ form.username.errors }}
+        {{ form.username.label_tag }} {{ form.username }}
+      </div>
+      <br>
+      <div class="form-row">
+        {{ form.password.errors }}
+        {{ form.password.label_tag }} {{ form.password }}
+        <input type="hidden" name="next" value="{{ next }}" />
+      </div>
+       <br>
+      {% url 'admin_password_reset' as password_reset_url %}
+      {% if password_reset_url %}
+      <div class="password-reset-link">
+        <a href="{{ password_reset_url }}">{% trans 'Forgotten your password or username?' %}</a>
+      </div>
+      {% endif %}
+       <br/>
+      <div class="am-cf">
+        <label>&nbsp;</label><input class="am-btn am-btn-primary am-btn-sm am-fl" type="submit" value="{% trans 'Log in' %}" />
+      </div>
+    </form>
+
+    <hr>
+    <div class="footer">
+      <p>© Copyright 2015 <a href="https://github.com/gwu-libraries/" target="_blank">George Washington University Libraries</a>.
+      Powered by <a herf="http://amazeui.org/">Amaze UI</a></p>
+    </div>
+
+<script type="text/javascript">
+document.getElementById('id_username').focus()
+</script>
+
+  </div>
+</div>
+</body>
+</html>
